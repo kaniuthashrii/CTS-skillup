@@ -1,0 +1,176 @@
+/* Accessibility & Cross Browser Notes
+
+Before Contrast:
+#3498db
+
+After Contrast:
+#0056b3
+
+Browser Tested:
+Chrome ✅
+Firefox ✅
+Edge ✅
+
+CSS Feature Checked:
+Flexbox
+
+Source:
+https://caniuse.com/flexbox
+
+*/
+
+/* CSS Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+    color:#222;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav ul li{
+    display:inline;
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:focus{
+    outline:3px solid yellow;
+}
+
+#hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+#hero h2{
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+#hero p{
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+button{
+
+    padding:12px 25px;
+
+    background:#0056b3;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#003d80;
+
+}
+
+button:focus{
+
+    outline:3px solid orange;
+
+}
+
+#courses{
+
+    padding:50px 20px;
+
+}
+
+#courses h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.course-card{
+
+    background:white;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+}
+
+.course-card:focus{
+
+    outline:3px solid #0056b3;
+
+}
+
+.course-card h3{
+
+    margin-bottom:10px;
+
+}
+
+.course-card p{
+
+    margin-bottom:10px;
+
+}
+
+.course-card span{
+
+    color:#0056b3;
+
+    font-weight:bold;
+
+}
+
+footer{
+
+    background:#2c3e50;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:40px;
+
+}

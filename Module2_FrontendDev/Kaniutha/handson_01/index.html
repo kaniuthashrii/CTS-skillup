@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Accessibility Audit (Lighthouse)
+    Initial Score: 95/100 (Example)
+    Issues Fixed:
+    1. Added aria-label to navigation.
+    2. Added aria-current to active page.
+    3. Correct heading hierarchy.
+    4. Added search label.
+    5. Added keyboard-accessible course cards.
+    6. Added aria-live status region.
+    7. Verified semantic HTML elements.
+    -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Student Portal</h1>
+
+    <nav aria-label="Main navigation">
+
+        <ul>
+
+            <li><a href="#" aria-current="page">Home</a></li>
+
+            <li><a href="#">Courses</a></li>
+
+            <li><a href="#">Profile</a></li>
+
+            <li><a href="#">Grades</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+<section id="hero">
+
+    <h2>Welcome to the Student Portal</h2>
+
+    <p>
+        Manage your courses, profile and grades all in one place.
+    </p>
+
+    <button>
+        Explore Courses
+    </button>
+
+</section>
+
+<section>
+
+    <h2>Search Courses</h2>
+
+    <label for="search">
+        Search Course
+    </label>
+
+    <input
+        id="search"
+        type="text"
+        placeholder="Search Courses"
+    >
+
+    <p role="status" aria-live="polite">
+        3 courses found
+    </p>
+
+</section>
+
+<section id="courses">
+
+    <h2>Available Courses</h2>
+
+    <article
+        class="course-card"
+        tabindex="0"
+        onclick="alert('HTML & CSS')"
+        onkeydown="if(event.key==='Enter'){this.click();}"
+    >
+
+        <h3>HTML & CSS</h3>
+
+        <p>Learn how to build beautiful web pages.</p>
+
+        <span>Credits: 3</span>
+
+    </article>
+
+    <article
+        class="course-card"
+        tabindex="0"
+        onclick="alert('JavaScript Basics')"
+        onkeydown="if(event.key==='Enter'){this.click();}"
+    >
+
+        <h3>JavaScript Basics</h3>
+
+        <p>Understand the fundamentals of JavaScript.</p>
+
+        <span>Credits: 4</span>
+
+    </article>
+
+    <article
+        class="course-card"
+        tabindex="0"
+        onclick="alert('React Development')"
+        onkeydown="if(event.key==='Enter'){this.click();}"
+    >
+
+        <h3>React Development</h3>
+
+        <p>Create modern web applications using React.</p>
+
+        <span>Credits: 5</span>
+
+    </article>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>&copy; 2026 Student Portal. All Rights Reserved.</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+
+<script>
+  cssVars();
+</script>
+
+</body>
+</html>
